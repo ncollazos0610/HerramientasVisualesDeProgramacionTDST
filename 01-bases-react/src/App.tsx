@@ -11,7 +11,7 @@ function App() {
     <>
     <BasicTypes/>
     </>
-  )
+  ) 
 }
 
 export default App

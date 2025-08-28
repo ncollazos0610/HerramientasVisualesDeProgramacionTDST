@@ -41,6 +41,36 @@
   color: #888;
 }
 div{
-color: aqua;
+color: rgb(255, 255, 255);
+text-align: left;
 }
 
+button{
+  border-radius: 25%;
+  border-color: aqua;
+  font-family: cursive;
+}
+
+button:hover{
+  background-color: aliceblue;
+  cursor: pointer;
+  color: black;
+  border-color: rgb(0, 238, 255);
+  box-shadow: #61dafbaa;
+
+}
+
+h2{
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 10px rgb(44, 32, 32);
+}
+h3{
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 20px rgb(196, 48, 48);
+}
+
+li{
+  text-align: left;
+  text-shadow: 1px 1px 10px aqua;
+  
+}
