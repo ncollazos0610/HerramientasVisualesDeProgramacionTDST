@@ -6,6 +6,25 @@ export const BasicTypes = () => {
   //const isActive: boolean = true;
   const [isActive, setisActive] = useState(true)
 
+  const names=[
+
+    "Carvajal",
+    "Nicolas",
+    "Jaime",
+    "Victor",
+    "Paula"
+  ];
+  /*llave de valor*/
+  const user ={
+    /*llave : valor*/
+    name: "Juanito",
+    email: "juan@gmail.com",
+    edad: 19,
+    role: "admin",
+    maritalStatus: "casado",
+    isActive: true
+  }
+
   return (
     <>
 
@@ -14,7 +33,7 @@ export const BasicTypes = () => {
 
       {/* shift+alt+f para identar el codigo */}
       {/* ctrl mas } para comentar */}
-      {/* ul>((li>(b+span))*3) : */}
+      {/* ul>((li>(b+span))*3) : */} 
 
       <ul>
         {/* li*3 : */}
@@ -26,6 +45,27 @@ export const BasicTypes = () => {
       <button onClick={() => setisActive(!isActive)}>
         {isActive ? "Desactivar" : "Activar"}
       </button>
+
+    {names[4]}
+
+    <ul>
+
+    {names.map((name,index)=><li key ={index}>
+    {name}
+
+    {/* puede ser button
+    {names.map((name,index)=><button key ={index}>
+    {name}</button> */}
+
+    </li>
+    
+    )}
+    </ul>
+
+    <h2>Objetos literales</h2>
+    {user.name}
+    <p> </p>
+    {user.isActive? "Activo" : "Inactivo"}
 
     </>
   )
