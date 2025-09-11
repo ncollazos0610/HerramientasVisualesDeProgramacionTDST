@@ -19,6 +19,7 @@ export const Pets = () => {
                 <h2>Imprime la lista de nombres con <span>Map</span></h2>
                 {pets.map((pet, index) => <div key={index}>
                     {pet}
+                    <hr />
                 </div>
                 )}
 

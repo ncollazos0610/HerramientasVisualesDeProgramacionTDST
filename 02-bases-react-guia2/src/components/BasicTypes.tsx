@@ -5,6 +5,7 @@ export const BasicTypes = () => {
   const age: number = 28;
   //const isActive: boolean = true;
   const [isActive, setisActive] = useState(true)
+  
 
   const names=[
 
@@ -24,6 +25,38 @@ export const BasicTypes = () => {
     maritalStatus: "casado",
     isActive: true
   }
+    // Listas de objetos literales
+  const users=[
+    {
+    /*llave : valor*/
+    name: "Juanito",
+    email: "juan@gmail.com",
+    edad: 19,
+    role: "admin",
+    maritalStatus: "casado",
+    isActive: true
+  },
+  {
+    /*llave : valor*/
+    name: "Nicolas",
+    email: "ncol@gmail.com",
+    edad: 25,
+    role: "admin",
+    maritalStatus: "soltero",
+    isActive: true
+  },
+  {
+    /*llave : valor*/
+    name: "Paula",
+    email: "pau8@gmail.com",
+    edad: 18,
+    role: "admin",
+    maritalStatus: "Divorciada",
+    isActive: true
+  }
+
+    
+  ]
 
   return (
     <>
@@ -49,7 +82,7 @@ export const BasicTypes = () => {
     {names[4]}
 
     <ul>
-
+    {/*Parametros           return */}
     {names.map((name,index)=><li key ={index}>
     {name}
 
@@ -66,6 +99,19 @@ export const BasicTypes = () => {
     {user.name}
     <p> </p>
     {user.isActive? "Activo" : "Inactivo"}
+
+    <h2>Listas de objetos Literales</h2>
+    <ul>
+      {/* para recodar y estudiar */}
+      <hr />
+      {users.map((user,index)=><div key={index}>
+        <div>{user.name}</div>
+        <div>{user.edad}</div>
+        <div>{user.email}</div>
+        <div>{user.role}</div>
+        <hr />  {/* linea de separacion */}
+      </div>)}
+    </ul>
 
     </>
   )
