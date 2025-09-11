@@ -5,10 +5,9 @@ export const BasicTypes = () => {
   const age: number = 28;
   //const isActive: boolean = true;
   const [isActive, setisActive] = useState(true)
-  
 
-  const names=[
 
+  const names = [
     "Carvajal",
     "Nicolas",
     "Jaime",
@@ -16,46 +15,58 @@ export const BasicTypes = () => {
     "Paula"
   ];
   /*llave de valor*/
-  const user ={
+  const user = {
     /*llave : valor*/
     name: "Juanito",
     email: "juan@gmail.com",
     edad: 19,
     role: "admin",
     maritalStatus: "casado",
-    isActive: true
-  }
-    // Listas de objetos literales
-  const users=[
-    {
-    /*llave : valor*/
-    name: "Juanito",
-    email: "juan@gmail.com",
-    edad: 19,
-    role: "admin",
-    maritalStatus: "casado",
-    isActive: true
-  },
-  {
-    /*llave : valor*/
-    name: "Nicolas",
-    email: "ncol@gmail.com",
-    edad: 25,
-    role: "admin",
-    maritalStatus: "soltero",
-    isActive: true
-  },
-  {
-    /*llave : valor*/
-    name: "Paula",
-    email: "pau8@gmail.com",
-    edad: 18,
-    role: "admin",
-    maritalStatus: "Divorciada",
     isActive: true
   }
 
-    
+  // Interface tipo user
+
+  interface User {
+    name?: string; // Si usamos el signo de interrogacion hacemos que el dato sea opcional y pueda recibir null
+    email: string;
+    edad: number;
+    role: string;
+    maritalStatus: string;
+    isActive: boolean;
+  }
+  // Listas de objetos literales
+  // implementacion de interface
+  const users: User[] = [
+    {
+      /*llave : valor*/
+      name: "Juanito",
+      email: "juan@gmail.com",
+      edad: 19,
+      role: "admin",
+      maritalStatus: "casado",
+      isActive: true
+    },
+    {
+      /*llave : valor*/
+      name: "Nicolas",
+      email: "ncol@gmail.com",
+      edad: 25,
+      role: "admin",
+      maritalStatus: "soltero",
+      isActive: true
+    },
+    {
+      /*llave : valor*/
+      name: "Paula",
+      email: "pau8@gmail.com",
+      edad: 18,
+      role: "admin",
+      maritalStatus: "Divorciada",
+      isActive: true
+    }
+
+
   ]
 
   return (
@@ -66,7 +77,7 @@ export const BasicTypes = () => {
 
       {/* shift+alt+f para identar el codigo */}
       {/* ctrl mas } para comentar */}
-      {/* ul>((li>(b+span))*3) : */} 
+      {/* ul>((li>(b+span))*3) : */}
 
       <ul>
         {/* li*3 : */}
@@ -79,39 +90,39 @@ export const BasicTypes = () => {
         {isActive ? "Desactivar" : "Activar"}
       </button>
 
-    {names[4]}
+      {names[4]}
+      <h2>Mapping para impresion de lista</h2>
+      <ul>
+        {/*Parametros           return */}
+        {names.map((name, index) => <li key={index}>
+          {name}
 
-    <ul>
-    {/*Parametros           return */}
-    {names.map((name,index)=><li key ={index}>
-    {name}
-
-    {/* puede ser button
+          {/* puede ser button
     {names.map((name,index)=><button key ={index}>
     {name}</button> */}
 
-    </li>
-    
-    )}
-    </ul>
+        </li>
 
-    <h2>Objetos literales</h2>
-    {user.name}
-    <p> </p>
-    {user.isActive? "Activo" : "Inactivo"}
+        )}
+      </ul>
 
-    <h2>Listas de objetos Literales</h2>
-    <ul>
-      {/* para recodar y estudiar */}
-      <hr />
-      {users.map((user,index)=><div key={index}>
-        <div>{user.name}</div>
-        <div>{user.edad}</div>
-        <div>{user.email}</div>
-        <div>{user.role}</div>
-        <hr />  {/* linea de separacion */}
-      </div>)}
-    </ul>
+      <h2>Objetos literales</h2>
+      {user.name}
+      <p> </p>
+      {user.isActive ? "Activo" : "Inactivo"}
+
+      <h2>Listas de objetos Literales</h2>
+      <ul>
+        {/* para recodar y estudiar */}
+        <hr />
+        {users.map((user, index) => <div key={index}>
+          <div>{user.name}</div>
+          <div>{user.edad}</div>
+          <div>{user.email}</div>
+          <div>{user.role}</div>
+          <hr />  {/* linea de separacion */}
+        </div>)}
+      </ul>
 
     </>
   )
