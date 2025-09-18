@@ -1,0 +1,68 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+header{
+    background-color: #ffcc00;
+     padding: 15px; /*espacio alrededor; */
+     text-align: center;
+}
+
+/* .producto  el "." lo usamos para llamar clases*/
+.producto
+{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0,0.1);
+
+}
+/* # es para los id */
+#producto1{
+    background-color: #ffcc00;
+    color: white;
+    margin-left: 45%;
+}
+
+#producto2{
+    background-color: #ffcc00;
+    color: rgb(0, 0, 0);
+    margin-left: 45%;
+}
+
+.producto img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+h2{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.category{
+    color: rgb(167, 182, 32);
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.category:hover{
+    text-decoration: underline;
+    color: rgb(255, 255, 255);
+}
+/* display:flex  se utiliza para */
+/* nav : hover los dos puntos son para psudoclases */

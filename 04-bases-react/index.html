@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    
+</head>
+
+<body>
+    <!-- etiquetas genericas -->
+    <!-- descargamos live preview para correr en el servidor live -->
+    <!-- ctrl shift p live previre internal browser o external without debug -->
+    <header>
+        <form action="">
+            <input placeholder="Buscar Productos...." type="text">
+            <button type="submit" class="btn-buscar">🔍</button>
+        </form>
+    </header>
+    <nav>
+        <a class="category" href="#">Electronica</a>
+        <a class="category" href="#">Hogar</a>
+        <a class="category" href="#">Ropa</a>
+    </nav>
+    <main>
+        <section>
+            <!--div.producto(Para crear un div con el nombre de clase producto)-->
+            <h2>Productos Destacados</h2>
+            <div class="producto" id="producto1">
+                <h2>Panaderia</h2>
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/65/e4/0d/panaderia-tradicional.jpg?w=900&h=500&s=1"
+                    alt="Imagen no encontrada"> <!--alt es para colocar un texto en caso de que no se encuentre -->
+                <h3>Torta</h3>
+                <small>$20.000</small>
+                <button class="btn-carrito"> 🛒</button>
+            </div>
+            <div class="producto" id="producto2">
+                
+                <h2>Gasesosas</h2>
+                <img src="https://mistiendas.com.co/961-large_default/gaseosa-pool-x-12-un-x250-gr.jpg"
+                    alt="Imagen no encontrada">
+                <h3>Pool</h3>
+                <small>$2.000</small>
+                <button class="btn-carrito"> 🛒</button>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>© 2025 Tienda Virtual - Contacto: info@tienda.com</p></footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
