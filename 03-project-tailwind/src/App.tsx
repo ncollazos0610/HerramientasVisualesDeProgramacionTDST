@@ -8,12 +8,12 @@ function App() {
 
   return (
     <>
-    <div>
-      <h1>
-    <Counter/>
-    React Counter
-      </h1>
-    </div>
+      <div className='flex flex-col justify-center items-center h-svh w-svw'>
+        <h1 className='text-4xl mb-5 '>Contador</h1>
+        <Counter />
+        React Counter
+
+      </div>
     </>
   )
 }
