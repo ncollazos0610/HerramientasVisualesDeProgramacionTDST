@@ -1,21 +1,15 @@
 import React from 'react'
 
-interface GrandchildProps {
-    message: string;
-    setMessage: (newMessage: string) => void;
+interface Props {
+  name:string
 }
 
-export const Grandchild = ({ message, setMessage }: GrandchildProps) => {
-    return (
-        <div className="p-4 border rounded-lg bg-gray-50 mt-3">
-            <h4 className="text-md font-semibold text-purple-700">
-                Componente Grandchild
-            </h4>
-            <p className="mb-2 text-gray-700">Mensaje recibido: {message}</p>
+export const GrandChild =({name}:Props) => {
+  return (
+    <>
+    <h2 className="text-lg font-semibold text-blue-700 mb-2">Componente GrandChild</h2>
+    <div>{name}</div>
 
-            <input type="text" className="border p-1 rounded w-full" value={message} onChange={(e) => setMessage(e.target.value)}/>
-        </div>
-    );
-};
-
-export default Grandchild;
+    </>
+  )
+}

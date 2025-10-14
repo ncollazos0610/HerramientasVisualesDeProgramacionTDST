@@ -1,19 +1,15 @@
-import Grandchild from "../components/GrandChild"
+import {GrandChild} from "./GrandChild"
 
-// 🔹 Interfaz del componente Child
-interface ChildProps {
-  message: string;
-  setMessage: (newMessage: string) => void;
+interface Props {
+  name:string,
+  age:number
 }
 
-const Child = ({ message, setMessage }: ChildProps) => {
+export const Child =({name,age}:Props) => {
   return (
-    <div className="p-4 border rounded-lg bg-white mt-3">
-      <h3 className="text-lg font-semibold text-green-700">Componente Child</h3>
-      {/* Pasamos nuevamente los props hacia el nieto */}
-      <Grandchild message={message} setMessage={setMessage} />
+    <div><h2 className="text-lg font-semibold text-blue-700 mb-2">Componente Child</h2><div>Edad: {age}</div>
+    
+    <div><GrandChild name ={name}/></div>
     </div>
-  );
-};
-
-export default Child;
+  )
+}
