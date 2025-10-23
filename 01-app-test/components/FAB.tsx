@@ -5,22 +5,22 @@ interface Props {
   label: string;
   position?: "left" | "right";
   // Actions
+  color: string;
   onPress?: () => void;
   onLongPress?: () => void;
 }
-export default function FAB({label,position = "right",onPress, onLongPress,}: Props) {
+export default function FAB({label,position = "right",color ='red',onPress, onLongPress,}: Props) {
   return (
     <Pressable  style={(pressed) => [
         styles.floattingButton,
         position === "right" ? styles.positionRight : styles.positionLeft,
+        { backgroundColor: color },
         pressed ? { opacity: 0.7 } : { opacity: 1 },
       ]}
       onPress={onPress}
       onLongPress={onLongPress}
       >
-      <Text style={{ color: "white", fontSize: 20 }}>{}</Text>
-      <Text>Incrementa</Text>
-      <Text style={{ color: "white", fontSize: 20 }}>{label}</Text>
+      <Text style={{ color: "black", fontSize: 18, fontWeight:'bold'}}>{label}</Text>
     </Pressable>
   )
 }
@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     padding: 10,
     shadowColor: "#000",
+    zIndex: 1000,
     shadowOffset: {
       width: 0,
       height: 4,
@@ -39,8 +40,7 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   positionRight: {
-    right: 265,
-    bottom: 125
+    right:150,
   },
   positionLeft: {
     left: 20,
