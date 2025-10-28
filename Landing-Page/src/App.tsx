@@ -1,15 +1,15 @@
 import { ThemeProvider } from "./context/ThemeContext";
-import { LanguageProvider } from "./context/LanguageContext";
-import ThemeSwitcher from "./components/ThemeSwitcher";
-import Settings from "./components/Configuration";
+import { LanguageProvider } from "./context/Language";
+import Landing from "./components/HomeLanding";
+import Settings from "./components/Settings";
 import "./App.css";
 
 function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
-        <div style={{ textAlign: "center", paddingTop: "40px" }}>
-          <ThemeSwitcher />
+        <div>
+          <Landing />
           <Settings />
         </div>
       </LanguageProvider>

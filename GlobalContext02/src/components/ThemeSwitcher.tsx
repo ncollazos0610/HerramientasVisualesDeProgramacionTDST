@@ -19,7 +19,7 @@ const ThemeSwitcher = () => {
                     marginTop: "10px",
                 }}
             >
-                Cambiar a {theme === "claro" ? "oscuro 🌙" : "claro ☀️  "}
+                Cambiar a {theme === "claro" ? "oscuro" : "claro "}
             </button>
 
             <div style={{ marginTop: "20px" }}>
