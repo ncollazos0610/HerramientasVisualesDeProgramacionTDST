@@ -12,14 +12,14 @@ const Settings = () => {
       title: "Configuraciones",
       theme: `Tema actual: ${theme}`,
       language: `Idioma actual: Español`,
-      like: "Me gusta ❤️",
+      like: "Me gusta",
       reset: "Reiniciar",
     },
     en: {
       title: "Settings",
       theme: `Current theme: ${theme}`,
       language: `Current language: English`,
-      like: "Like ❤️",
+      like: "Like :3",
       reset: "Reset",
     },
   };
@@ -40,7 +40,7 @@ const Settings = () => {
       <p>{t.language}</p>
 
       <button onClick={toggleTheme} style={{ margin: "10px" }}>
-        {theme === "claro" ? "🌙 Oscuro" : "☀️ Claro"}
+        {theme === "claro" ? " Oscuro" : " Claro"}
       </button>
       <button onClick={toggleLanguage} style={{ margin: "10px" }}>
         {language === "es" ? "Switch to English" : "Cambiar a Español"}

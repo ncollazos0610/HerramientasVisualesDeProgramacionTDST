@@ -9,9 +9,9 @@ export default function LikeButton() {
         onClick={increase}
         className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full shadow-md transition-all duration-200 active:scale-95"
       >
-        👍 Like ({count})
+         Like 👍 {count}
       </button>
-      <p className="text-sm text-gray-300 mt-2">¡Apoya nuestros productos naturales!</p>
+      <p className="text-2x1 text-gray-300 mt-2 text-2x1">¡Apoya nuestros productos naturales!</p>
     </div>
   );
 }

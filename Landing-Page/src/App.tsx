@@ -10,11 +10,14 @@ function App() {
       <LanguageProvider>
         <div>
           <Landing />
-          <Settings />
+          <div className="fixed top-5 right-5 z-50">
+            {/* <Settings /> */}
+          </div>
         </div>
       </LanguageProvider>
     </ThemeProvider>
   );
 }
+
 
 export default App;
